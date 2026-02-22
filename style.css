@@ -1,0 +1,430 @@
+/* Updated Modern Styling for Spotify Clone */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #1ed760;
+    --primary-hover: #1fdf64;
+    --bg-color: #121212;
+    --container-bg: rgba(24, 24, 24, 0.7);
+    --item-bg: rgba(255, 255, 255, 0.05);
+    --item-hover: rgba(255, 255, 255, 0.15);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --nav-bg: #000000;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background gradient animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #121212, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 70px;
+    padding: 0 2rem;
+}
+
+nav ul li {
+    padding: 0 20px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: var(--text-primary);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-left: auto;
+    transition: background-color 0.3s ease;
+}
+
+.search-container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-container i {
+    color: var(--text-secondary);
+    margin-right: 10px;
+}
+
+#searchInput {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: inherit;
+    outline: none;
+    width: 200px;
+}
+
+#searchInput::placeholder {
+    color: var(--text-secondary);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.brand img {
+    width: 44px;
+    padding-right: 12px;
+}
+
+/* Glassmorphism Container */
+.container {
+    min-height: 70vh;
+    background: var(--container-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-bottom: 150px;
+    /* Space for bottom player */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.songItemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.songItem {
+    height: 60px;
+    display: flex;
+    background-color: var(--item-bg);
+    color: var(--text-primary);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.songItem:hover {
+    background-color: var(--item-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.songItem img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.songNameContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.songName {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.songlistplay {
+    display: flex;
+    align-items: center;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.timestamp i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    color: var(--primary-color);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.timestamp i:hover {
+    transform: scale(1.1);
+    color: var(--primary-hover);
+}
+
+/* Bottom Player */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#currentTime,
+#totalDuration {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    min-width: 45px;
+}
+
+#myProgressBar {
+    flex-grow: 1;
+    max-width: 800px;
+    /* Limit width on very large screens */
+    cursor: pointer;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    /* initial background color */
+    background: #535353;
+    border-radius: 5px;
+    outline: none;
+    /* transition removed to allow real-time JS gradient updates without lagging */
+}
+
+/* Hover effect should only affect the thumb opacity now, not the background color */
+
+
+#myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /* Hide thumb until hover (Spotify style) */
+    transition: opacity 0.2s;
+}
+
+.progress-container:hover #myProgressBar::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.songInfo {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    /* Take up left space */
+    font-weight: 500;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    width: 35px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+#masterSongName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-grow: 1;
+    /* Center icons */
+}
+
+.icons i {
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icons i:hover {
+    color: #fff;
+}
+
+#masterPlay {
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+#masterPlay:hover {
+    transform: scale(1.1);
+}
+
+.extra-controls {
+    width: 30%;
+    /* Balance the layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#volumeIcon {
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#volumeIcon:hover {
+    color: var(--text-primary);
+}
+
+#volumeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 4px;
+    background: #535353;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.extra-controls:hover #volumeSlider::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .control-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .songInfo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .extra-controls {
+        display: none;
+    }
+
+    .bottom {
+        height: auto;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourite music is here</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+            <li class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search songs...">
+            </li>
+        </ul>
+    </nav>
+
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Best of NCS - No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <!-- ... Repeat for 10 songs. Since data is loaded via JS in script.js, we only need placeholders -->
+                <div class="songItem">
+                    <img alt="2">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="3">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="4">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="5">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="6">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="7">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="8">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="9">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="10">
+                    <div class="songNameContainer">
+                        <span class="songName">Let me Love You</span>
+                    </div>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="9"
+                                class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <input type="range" name="range" class="progress-bar" id="myProgressBar" min="0" value="0" max="100">
+            <span id="totalDuration">0:00</span>
+        </div>
+
+        <div class="control-row">
+            <div class="songInfo">
+                <img src="playing.gif" alt="playing graphic" id="gif">
+                <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+            </div>
+            <div class="icons">
+                <!-- fontawesome icons -->
+                <i class="fas fa-2x fa-step-backward" id="previous"></i>
+                <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+                <i class="fas fa-2x fa-step-forward" id="next"></i>
+            </div>
+            <!-- Volume controls -->
+            <div class="extra-controls">
+                <i class="fas fa-volume-up" id="volumeIcon"></i>
+                <input type="range" id="volumeSlider" min="0" max="100" value="100">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+
+</html>

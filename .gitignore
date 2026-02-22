@@ -1,0 +1,27 @@
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js (just in case you add it later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Mac specific
+.AppleDouble
+.LSOverride
+
+# Keep this empty directory
+# .gitkeep
