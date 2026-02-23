@@ -20,11 +20,11 @@ let songs = [
     { songName: "DEAF KEV - Invincible [NCS Release]", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
     { songName: "Different Heaven & EH!DE - My Heart", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
     { songName: "Janji-Heroes-Tonight", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
-    { songName: "Rabba - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/6.jpg" },
-    { songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/7.jpg" },
-    { songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg" },
-    { songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg" },
-    { songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg" },
+    { songName: "Heroes Tonight", filePath: "songs/6.mp3", coverPath: "covers/6.jpg" },
+    { songName: "Invincible", filePath: "songs/7.mp3", coverPath: "covers/7.jpg" },
+    { songName: "Sky High", filePath: "songs/8.mp3", coverPath: "covers/8.jpg" },
+    { songName: "Heroes Tonight", filePath: "songs/9.mp3", coverPath: "covers/9.jpg" },
+    { songName: "Symbolism", filePath: "songs/10.mp3", coverPath: "covers/10.jpg" },
 ]
 
 // Initialize song list UI
