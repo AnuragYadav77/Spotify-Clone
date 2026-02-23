@@ -18,7 +18,7 @@ A responsive Spotify web clone built using HTML, CSS, and Vanilla JavaScript.
 - HTML Audio API
 
 ## 📌 Live Demo
-[Live Link Here]
+[https://anuragyadav77.github.io/Spotify-Clone/]
 
 ## 📚 What I Learned
 - Working with audio element
